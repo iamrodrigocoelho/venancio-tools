@@ -3,8 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F1E3C] text-white mt-24">
-      {/* Main footer */}
+    <footer className="bg-[#F7F6F2] mt-24 border-t border-[#E8E4D9]">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
 
@@ -15,16 +14,16 @@ export default function Footer() {
               alt="Venancio Tools"
               width={160}
               height={40}
-              className="h-9 w-auto brightness-0 invert"
+              className="h-9 w-auto"
             />
-            <p className="text-sm text-[#94A3B8] leading-relaxed">
+            <p className="text-sm text-[#6B7280] leading-relaxed">
               Ecossistema exclusivo de parceiros e soluções para o grupo Venancio.
             </p>
             <div className="flex gap-3 mt-1">
               {/* LinkedIn */}
               <a
                 href="#"
-                className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#94A3B8] hover:border-[#C9A265] hover:text-[#C9A265] transition-all duration-200"
+                className="w-8 h-8 rounded-full border border-[#E8E4D9] flex items-center justify-center text-[#6B7280] hover:border-[#C9A265] hover:text-[#C9A265] transition-all duration-200"
                 aria-label="LinkedIn"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -34,7 +33,7 @@ export default function Footer() {
               {/* Instagram */}
               <a
                 href="#"
-                className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#94A3B8] hover:border-[#C9A265] hover:text-[#C9A265] transition-all duration-200"
+                className="w-8 h-8 rounded-full border border-[#E8E4D9] flex items-center justify-center text-[#6B7280] hover:border-[#C9A265] hover:text-[#C9A265] transition-all duration-200"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -50,7 +49,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {["Parceiros", "Soluções", "Condições Especiais", "Novidades"].map((item) => (
                 <li key={item}>
-                  <Link href="#" className="text-sm text-[#94A3B8] hover:text-white transition-colors duration-150">
+                  <Link href="#" className="text-sm text-[#6B7280] hover:text-[#0F1E3C] transition-colors duration-150">
                     {item}
                   </Link>
                 </li>
@@ -63,7 +62,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {["Sobre o Grupo Venancio", "Carreiras", "Imprensa", "Contato"].map((item) => (
                 <li key={item}>
-                  <Link href="#" className="text-sm text-[#94A3B8] hover:text-white transition-colors duration-150">
+                  <Link href="#" className="text-sm text-[#6B7280] hover:text-[#0F1E3C] transition-colors duration-150">
                     {item}
                   </Link>
                 </li>
@@ -76,7 +75,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {["Central de Ajuda", "Fale Conosco", "Política de Privacidade", "Termos de Uso"].map((item) => (
                 <li key={item}>
-                  <Link href="#" className="text-sm text-[#94A3B8] hover:text-white transition-colors duration-150">
+                  <Link href="#" className="text-sm text-[#6B7280] hover:text-[#0F1E3C] transition-colors duration-150">
                     {item}
                   </Link>
                 </li>
@@ -86,11 +85,11 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[#64748B]">
+        <div className="border-t border-[#E8E4D9] mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-[#9CA3AF]">
             © {new Date().getFullYear()} Venancio Tools. Todos os direitos reservados.
           </p>
-          <p className="text-xs text-[#64748B]">
+          <p className="text-xs text-[#9CA3AF]">
             Acesso exclusivo para colaboradores e parceiros do Grupo Venancio.
           </p>
         </div>
