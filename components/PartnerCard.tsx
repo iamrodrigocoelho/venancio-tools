@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Partner } from "@/data/partners";
 
 interface PartnerCardProps {
@@ -6,7 +7,13 @@ interface PartnerCardProps {
 
 export default function PartnerCard({ partner }: PartnerCardProps) {
   return (
-    <article className="bg-white rounded-2xl border border-[#E8E4D9] p-6 flex flex-col gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-[#C9A265]/40 transition-all duration-200 cursor-default">
+    <Link
+      href={partner.url}
+      target={partner.url.startsWith("http") ? "_blank" : "_self"}
+      rel="noopener noreferrer"
+      className="block"
+    >
+    <article className="bg-white rounded-2xl border border-[#E8E4D9] p-6 flex flex-col gap-4 hover:-translate-y-1 hover:shadow-lg hover:border-[#C9A265]/40 transition-all duration-200 cursor-pointer">
       {/* Header row: logo + category chip + badge */}
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-center gap-3 min-w-0">
@@ -61,5 +68,6 @@ export default function PartnerCard({ partner }: PartnerCardProps) {
         Ver Detalhes →
       </button>
     </article>
+    </Link>
   );
 }

@@ -7,6 +7,7 @@ export type Partner = {
   description: string;
   benefits: string[];
   segment: "parceiros" | "solucoes" | "both";
+  url: string;
 };
 
 export const CATEGORIES = [
@@ -34,6 +35,7 @@ export const partners: Partner[] = [
       "Suporte 24/7 prioritário",
     ],
     segment: "solucoes",
+    url: "http://localhost:3000",
   },
   {
     id: "2",
@@ -49,6 +51,7 @@ export const partners: Partner[] = [
       "Desconto progressivo por adesão",
     ],
     segment: "parceiros",
+    url: "#",
   },
   {
     id: "3",
@@ -64,6 +67,7 @@ export const partners: Partner[] = [
       "Centro de distribuição próprio",
     ],
     segment: "parceiros",
+    url: "#",
   },
   {
     id: "4",
@@ -79,6 +83,7 @@ export const partners: Partner[] = [
       "Gestão de fluxo de caixa integrada",
     ],
     segment: "parceiros",
+    url: "#",
   },
   {
     id: "5",
@@ -94,6 +99,7 @@ export const partners: Partner[] = [
       "Relatórios de desempenho",
     ],
     segment: "solucoes",
+    url: "#",
   },
   {
     id: "6",
@@ -109,6 +115,7 @@ export const partners: Partner[] = [
       "Relatórios mensais de performance",
     ],
     segment: "parceiros",
+    url: "#",
   },
   {
     id: "7",
@@ -124,6 +131,7 @@ export const partners: Partner[] = [
       "Integração com ERPs líderes",
     ],
     segment: "solucoes",
+    url: "#",
   },
   {
     id: "8",
@@ -139,6 +147,7 @@ export const partners: Partner[] = [
       "App de hábitos saudáveis",
     ],
     segment: "parceiros",
+    url: "#",
   },
   {
     id: "9",
@@ -154,5 +163,6 @@ export const partners: Partner[] = [
       "Relatório de saving",
     ],
     segment: "solucoes",
+    url: "#",
   },
 ];
