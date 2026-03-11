@@ -15,7 +15,7 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Venancio Tools — Ecossistema de Parceiros",
+  title: "Venancio Tools — Ecossistema de Soluções",
   description:
     "Portal de parceiros e soluções corporativas do Grupo Venancio. Acesso exclusivo a condições especiais negociadas.",
 };

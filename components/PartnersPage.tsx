@@ -4,20 +4,13 @@ import { useState, useMemo } from "react";
 import { partners, CATEGORIES, type Partner } from "@/data/partners";
 import PartnerCard from "@/components/PartnerCard";
 
-type Segment = "parceiros" | "solucoes";
-
 export default function PartnersPage() {
   const [search, setSearch] = useState("");
-  const [activeSegment, setActiveSegment] = useState<Segment>("parceiros");
   const [activeCategory, setActiveCategory] = useState("Todos");
 
   const filtered = useMemo<Partner[]>(() => {
     const q = search.trim().toLowerCase();
     return partners.filter((p) => {
-      // Segment filter
-      const matchSegment =
-        p.segment === activeSegment || p.segment === "both";
-
       // Category filter
       const matchCategory =
         activeCategory === "Todos" || p.category === activeCategory;
@@ -29,43 +22,15 @@ export default function PartnersPage() {
         p.category.toLowerCase().includes(q) ||
         p.description.toLowerCase().includes(q);
 
-      return matchSegment && matchCategory && matchSearch;
+      return matchCategory && matchSearch;
     });
-  }, [search, activeSegment, activeCategory]);
+  }, [search, activeCategory]);
 
   return (
     <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10 pb-20">
       {/* Back link */}
-      <div className="mb-10">
-        <a
-          href="#"
-          className="inline-flex items-center gap-1.5 text-sm text-[#6B7280] hover:text-[#0F1E3C] transition-colors duration-150 group"
-        >
-          <svg
-            className="w-4 h-4 transition-transform duration-150 group-hover:-translate-x-0.5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-            />
-          </svg>
-          Voltar ao portal
-        </a>
-      </div>
-
       {/* Page title section */}
       <div className="flex flex-col items-center text-center gap-3 mb-10">
-        <span className="text-xs tracking-widest uppercase text-[#C9A265] font-medium font-inter">
-          Ecossistema de Parceiros
-        </span>
-        <h1 className="text-4xl font-playfair text-[#0F1E3C] leading-tight">
-          Parceiros &amp; Soluções
-        </h1>
         <p className="text-[#6B7280] text-base max-w-xl leading-relaxed">
           Acesso exclusivo a condições especiais negociadas para o grupo Venancio
         </p>
@@ -98,29 +63,6 @@ export default function PartnersPage() {
           />
         </div>
       </div>
-
-      {/* Segment toggle */}
-      <div className="flex justify-center mb-6">
-        <div className="inline-flex bg-[#F0EDE6] rounded-2xl p-1 gap-1">
-          {(["parceiros", "solucoes"] as Segment[]).map((seg) => (
-            <button
-              key={seg}
-              onClick={() => {
-                setActiveSegment(seg);
-                setActiveCategory("Todos");
-              }}
-              className={`px-5 py-2 rounded-xl text-sm font-medium transition-all duration-150 ${
-                activeSegment === seg
-                  ? "bg-[#0F1E3C] text-white shadow-sm"
-                  : "bg-transparent text-[#6B7280] hover:text-[#0F1E3C]"
-              }`}
-            >
-              {seg === "parceiros" ? "Parceiros" : "Soluções"}
-            </button>
-          ))}
-        </div>
-      </div>
-
       {/* Filter chips */}
       <div className="flex justify-center mb-8">
         <div className="flex flex-wrap justify-center gap-2">
