@@ -10,11 +10,11 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Image
-              src="/logo.png"
+              src="/logo-venancio.svg"
               alt="Venancio Tools"
-              height={36}
-              width={160}
-              style={{ width: "auto", height: "36px" }}
+              height={48}
+              width={200}
+              style={{ width: "auto", height: "48px" }}
               priority
             />
           </div>

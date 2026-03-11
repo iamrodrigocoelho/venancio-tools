@@ -10,11 +10,11 @@ export default function Footer() {
           {/* Brand column */}
           <div className="md:col-span-1 flex flex-col gap-5">
             <Image
-              src="/logo.png"
+              src="/logo-venancio.svg"
               alt="Venancio Tools"
-              width={160}
-              height={40}
-              className="h-9 w-auto"
+              width={200}
+              height={48}
+              className="h-12 w-auto"
             />
             <p className="text-sm text-[#6B7280] leading-relaxed">
               Ecossistema exclusivo de parceiros e soluções para o grupo Venancio.
