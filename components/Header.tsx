@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const navLinks = ["Início", "Parceiros", "Soluções", "Suporte"];
+
 
 export default function Header() {
   return (
@@ -20,17 +20,6 @@ export default function Header() {
           </div>
 
           {/* Navigation — desktop */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href="#"
-                className="text-sm text-[#1F2937] hover:text-[#0F1E3C] font-medium transition-colors duration-150"
-              >
-                {link}
-              </a>
-            ))}
-          </nav>
 
           {/* CTA + Hamburger */}
           <div className="flex items-center gap-4">
@@ -38,7 +27,7 @@ export default function Header() {
               href="#"
               className="hidden sm:inline-flex items-center border border-[#0F1E3C] text-[#0F1E3C] px-4 py-1.5 rounded-full text-sm font-medium hover:bg-[#0F1E3C] hover:text-white transition-all duration-200"
             >
-              Fale Conosco
+              Ajuda
             </a>
 
             {/* Hamburger — mobile only (visual) */}

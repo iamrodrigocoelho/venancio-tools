@@ -13,13 +13,13 @@ export default function PartnersPage() {
     return partners.filter((p) => {
       // Category filter
       const matchCategory =
-        activeCategory === "Todos" || p.category === activeCategory;
+        activeCategory === "Todos" || p.category.includes(activeCategory);
 
       // Search filter
       const matchSearch =
         !q ||
         p.name.toLowerCase().includes(q) ||
-        p.category.toLowerCase().includes(q) ||
+        p.category.some((c) => c.toLowerCase().includes(q)) ||
         p.description.toLowerCase().includes(q);
 
       return matchCategory && matchSearch;
@@ -30,9 +30,9 @@ export default function PartnersPage() {
     <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10 pb-20">
       {/* Back link */}
       {/* Page title section */}
-      <div className="flex flex-col items-center text-center gap-3 mb-10">
+      <div className="flex flex-col items-center text-center gap-3 mb-6">
         <p className="text-[#6B7280] text-base max-w-xl leading-relaxed">
-          Acesso exclusivo a condições especiais negociadas para o grupo Venancio
+          Hub de soluções corporativas desenvolvidas com Inteligência Artificial
         </p>
       </div>
 

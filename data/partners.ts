@@ -2,7 +2,7 @@ export type Partner = {
   id: string;
   logo: string;
   name: string;
-  category: string;
+  category: string[];
   special: boolean;
   description: string;
   benefits: string[];
@@ -25,12 +25,12 @@ export const CATEGORIES = [
 export const partners: Partner[] = [
   {
     id: "1",
-    logo: "GE",
+    logo: "/carros.png",
     name: "Gestão Estacionamento",
-    category: "RH",
-    special: true,
+    category: ["RH","Matriz"],
+    special: false,
     description:
-      "Plataforma que organiza o cadastro de veículos, controla entradas e saídas e apoia a administração das vagas da empresa.",
+      "Cadastro de veículos, controla entradas e saídas e a administração das vagas da empresa.",
     benefits: [
       "Mais controle e organização das vagas",
       "Segurança operacional",
@@ -41,12 +41,12 @@ export const partners: Partner[] = [
   },
   {
     id: "2",
-    logo: "GU",
+    logo: "/uniforme.png",
     name: "Gestão de Uniforme",
-    category: "RH",
-    special: true,
+    category: ["RH","Loja","Matriz"],
+    special: false,
     description:
-      "Solução que controla a distribuição, solicitação e estoque de uniformes dos colaboradores de forma centralizada.",
+      "Solicitação de uniformes de loja, controle de estoque e distribuição.",
     benefits: [
       "Melhor experiência para o colaborador",
       "Gestão centralizada das regras de concessão",
@@ -57,16 +57,16 @@ export const partners: Partner[] = [
   },
   {
     id: "3",
-    logo: "FL",
-    name: "FastLog",
-    category: "Logística",
+    logo: "/dolar.png",
+    name: "Preço na Loja",
+    category: ["Tecnologia","Loja"],
     special: false,
     description:
-      "Soluções de última milha e distribuição B2B com rastreamento em tempo real e integração via API.",
+      "Verifique o preço de um produto em uma das nossas 150 lojas.",
     benefits: [
-      "Entrega expressa D+1",
-      "API de rastreamento",
-      "Centro de distribuição próprio",
+      "Valide o preço no pdv da loja",
+      "Redução de divergências e erros",
+      "Maior confiabilidade operacional",
     ],
     segment: "parceiros",
     url: "#",
@@ -75,7 +75,7 @@ export const partners: Partner[] = [
     id: "4",
     logo: "CB",
     name: "CapitalBank",
-    category: "Financeiro",
+    category: ["Financeiro"],
     special: true,
     description:
       "Serviços financeiros corporativos: crédito empresarial, gestão de tesouraria e conta digital PJ sem tarifas.",
@@ -91,7 +91,7 @@ export const partners: Partner[] = [
     id: "5",
     logo: "TL",
     name: "TalentLink",
-    category: "RH",
+    category: ["RH"],
     special: false,
     description:
       "Plataforma de recrutamento, gestão de talentos e desenvolvimento de competências com inteligência artificial.",
@@ -107,7 +107,7 @@ export const partners: Partner[] = [
     id: "6",
     logo: "BM",
     name: "BrandMax",
-    category: "Marketing",
+    category: ["Marketing"],
     special: false,
     description:
       "Agência especializada em comunicação corporativa, mídia digital e gestão de marca para o varejo farmacêutico.",
@@ -123,7 +123,7 @@ export const partners: Partner[] = [
     id: "7",
     logo: "DS",
     name: "DataSync",
-    category: "Tecnologia",
+    category: ["Tecnologia"],
     special: true,
     description:
       "Infraestrutura de dados, analytics avançado e automação de processos com integração nativa aos sistemas legados.",
@@ -139,7 +139,7 @@ export const partners: Partner[] = [
     id: "8",
     logo: "VB",
     name: "VidaBem",
-    category: "Saúde",
+    category: ["Saúde"],
     special: false,
     description:
       "Programa de bem-estar corporativo com suporte psicológico, atividade física e programas de qualidade de vida.",
@@ -155,7 +155,7 @@ export const partners: Partner[] = [
     id: "9",
     logo: "PR",
     name: "ProcureRight",
-    category: "Logística",
+    category: ["Logística"],
     special: false,
     description:
       "Plataforma de procurement inteligente com catálogo centralizado, cotações automatizadas e gestão de fornecedores.",
