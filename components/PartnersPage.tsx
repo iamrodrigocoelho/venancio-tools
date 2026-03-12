@@ -20,7 +20,8 @@ export default function PartnersPage() {
         !q ||
         p.name.toLowerCase().includes(q) ||
         p.category.some((c) => c.toLowerCase().includes(q)) ||
-        p.description.toLowerCase().includes(q);
+        p.description.toLowerCase().includes(q) ||
+        p.tags.some((t) => t.toLowerCase().includes(q));
 
       return matchCategory && matchSearch;
     });

@@ -6,6 +6,7 @@ export type Partner = {
   special: boolean;
   description: string;
   benefits: string[];
+  tags: string[];
   segment: "parceiros" | "solucoes" | "both";
   url: string;
 };
@@ -36,6 +37,7 @@ export const partners: Partner[] = [
       "Segurança operacional",
       "Erros de registro",
     ],
+    tags: ["Claude Code", "Codex", "Next.js", "SQLite","Docker","Git","Homus sapiens"],
     segment: "",
     url: "http://localhost:3002",
   },
@@ -52,6 +54,7 @@ export const partners: Partner[] = [
       "Gestão centralizada das regras de concessão",
       "Mais agilidade para RH e colaboradores",
     ],
+    tags: ["Claude Code", "Next.js", "PostgreSQL", "Docker","Git","Homus sapiens"],
     segment: "solucoes",
     url: "http://localhost:3001",
   },
@@ -60,7 +63,7 @@ export const partners: Partner[] = [
     logo: "/preco-etiqueta.png",
     name: "Preço na Loja",
     category: ["Tecnologia","Loja"],
-    special: false,
+    special: true,
     description:
       "Verifique o preço de um produto em uma das nossas 150 lojas.",
     benefits: [
@@ -68,54 +71,58 @@ export const partners: Partner[] = [
       "Redução de divergências e erros",
       "Maior confiabilidade operacional",
     ],
+    tags: ["preço", "produto", "pdv", "loja", "consulta"],
     segment: "parceiros",
     url: "#",
   },
   {
     id: "4",
     logo: "CB",
-    name: "CapitalBank",
+    name: "Lorem ipsum",
     category: ["Financeiro"],
     special: true,
     description:
-      "Serviços financeiros corporativos: crédito empresarial, gestão de tesouraria e conta digital PJ sem tarifas.",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     benefits: [
-      "Crédito com taxa preferencial",
-      "Conta PJ sem tarifa",
-      "Gestão de fluxo de caixa integrada",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
     ],
+    tags: ["banco", "crédito", "financeiro", "conta PJ", "tesouraria"],
     segment: "parceiros",
     url: "#",
   },
   {
     id: "5",
     logo: "TL",
-    name: "TalentLink",
+    name: "Lorem ipsum",
     category: ["RH"],
-    special: false,
+    special: true,
     description:
-      "Plataforma de recrutamento, gestão de talentos e desenvolvimento de competências com inteligência artificial.",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     benefits: [
-      "Banco de talentos qualificados",
-      "Avaliação por competências",
-      "Relatórios de desempenho",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
     ],
+    tags: ["recrutamento", "talentos", "seleção", "pessoas", "contratação"],
     segment: "solucoes",
     url: "#",
   },
   {
     id: "6",
     logo: "BM",
-    name: "BrandMax",
+    name: "Lorem ipsum dolor",
     category: ["Marketing"],
     special: false,
     description:
-      "Agência especializada em comunicação corporativa, mídia digital e gestão de marca para o varejo farmacêutico.",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
     benefits: [
-      "Estratégia de conteúdo dedicada",
-      "Gestão de redes sociais",
-      "Relatórios mensais de performance",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
+      "Lorem ipsum dolor",
     ],
+    tags: ["marketing", "redes sociais", "conteúdo", "mídia", "comunicação"],
     segment: "parceiros",
     url: "#",
   },
@@ -132,6 +139,7 @@ export const partners: Partner[] = [
       "Automação de relatórios",
       "Integração com ERPs líderes",
     ],
+    tags: ["dados", "analytics", "BI", "dashboard", "automação"],
     segment: "solucoes",
     url: "#",
   },
@@ -148,6 +156,7 @@ export const partners: Partner[] = [
       "Parcerias com academias",
       "App de hábitos saudáveis",
     ],
+    tags: ["bem-estar", "saúde mental", "academia", "qualidade de vida"],
     segment: "parceiros",
     url: "#",
   },
@@ -164,6 +173,7 @@ export const partners: Partner[] = [
       "Painel de fornecedores",
       "Relatório de saving",
     ],
+    tags: ["compras", "fornecedores", "cotação", "procurement", "saving"],
     segment: "solucoes",
     url: "#",
   },

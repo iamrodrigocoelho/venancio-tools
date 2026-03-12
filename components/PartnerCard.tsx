@@ -39,7 +39,7 @@ export default function PartnerCard({ partner }: PartnerCardProps) {
         {/* Special badge */}
         {partner.special && (
           <span className="text-xs px-2.5 py-1 rounded-full bg-[#FDF6E3] text-[#C9A265] border border-[#C9A265]/30 font-medium whitespace-nowrap flex-shrink-0">
-            Condições especiais
+            Em breve
           </span>
         )}
       </div>
@@ -68,6 +68,17 @@ export default function PartnerCard({ partner }: PartnerCardProps) {
           </li>
         ))}
       </ul>
+
+      {/* Tags */}
+      {partner.tags.length > 0 && (
+        <div className="flex flex-wrap gap-1.5">
+          {partner.tags.map((tag) => (
+            <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-[#F7F6F2] text-[#9CA3AF] border border-[#E8E4D9]">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )}
 
       {/* Divider */}
       <div className="border-t border-[#F0EDE6]" />
