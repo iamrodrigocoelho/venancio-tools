@@ -57,7 +57,7 @@ export const partners: Partner[] = [
   },
   {
     id: "3",
-    logo: "/dolar.png",
+    logo: "/preco-etiqueta.png",
     name: "Preço na Loja",
     category: ["Tecnologia","Loja"],
     special: false,
