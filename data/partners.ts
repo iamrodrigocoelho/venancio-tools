@@ -38,8 +38,8 @@ export const partners: Partner[] = [
       "Erros de registro",
     ],
     tags: ["Claude Code", "Codex", "Next.js", "SQLite","Docker","Git","Homus sapiens"],
-    segment: "",
-    url: "http://localhost:3002",
+    segment: "solucoes",
+    url: "https://parking.iamrodrigocoelho.com",
   },
   {
     id: "2",
@@ -56,7 +56,7 @@ export const partners: Partner[] = [
     ],
     tags: ["Claude Code", "Next.js", "PostgreSQL", "Docker","Git","Homus sapiens"],
     segment: "solucoes",
-    url: "http://localhost:3001",
+    url: "https://uniforms.iamrodrigocoelho.com",
   },
   {
     id: "3",
@@ -71,7 +71,7 @@ export const partners: Partner[] = [
       "Redução de divergências e erros",
       "Maior confiabilidade operacional",
     ],
-    tags: ["preço", "produto", "pdv", "loja", "consulta"],
+    tags: ["ChatGPT", "Codex", "Homus sapiens"],
     segment: "parceiros",
     url: "#",
   },
