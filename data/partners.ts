@@ -60,10 +60,10 @@ export const partners: Partner[] = [
   },
   {
     id: "3",
-    logo: "/preco-etiqueta.png",
+    logo: "/medicamento.png",
     name: "Hospinova",
-    category: ["Tecnologia","Hospinova"],
-    special: true,
+    category: ["Tecnologia","Hospinova","Matriz"],
+    special: false,
     description:
       "Novo website da Hospinova.",
     benefits: [
@@ -71,7 +71,7 @@ export const partners: Partner[] = [
       "Ampliação da presença digital",
       "Maior indexação nos motores de busca",
     ],
-    tags: ["ChatGPT", "Codex", "Homus sapiens"],
+    tags: ["Claude Code", "Manus", "Next.js", "Git", "Homus sapiens"],
     segment: "parceiros",
     url: "https://hospinova.iamrodrigocoelho.com",
   },
