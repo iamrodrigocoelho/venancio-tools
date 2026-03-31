@@ -65,7 +65,7 @@ export const partners: Partner[] = [
     category: ["Tecnologia","Hospinova","Matriz"],
     special: false,
     description:
-      "Novo website da Hospinova.",
+      "Novo website da Hospinova, distribuidora do grupo Venancio, fundada em 2014.",
     benefits: [
       "Compra pelo WhatsApp",
       "Ampliação da presença digital",
