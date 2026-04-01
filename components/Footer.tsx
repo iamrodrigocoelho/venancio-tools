@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F7F6F2] mt-24 border-t border-[#E8E4D9]">
+    <footer className="bg-[#F5F0E8] mt-24 border-t border-[#E8E4D9]">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
 
@@ -12,13 +12,21 @@ export default function Footer() {
             <Image
               src="/logo-venancio.svg"
               alt="Venancio Tools"
-              width={200}
-              height={48}
-              className="h-12 w-auto"
+              width={180}
+              height={40}
+              className="h-10 w-auto"
+              style={{  }}
             />
             <p className="text-sm text-[#6B7280] leading-relaxed">
-              Ecossistema exclusivo de parceiros e soluções para o grupo Venancio.
+              Ecossistema exclusivo de parceiros e soluções para o Grupo Venancio.
             </p>
+            <Image
+              src="/logo-hospinova-big.png"
+              alt="Hospinova"
+              width={180}
+              height={40}
+              className="w-[180px] h-auto"
+            />
             <div className="flex gap-3 mt-1">
               {/* LinkedIn */}
               <a
@@ -73,10 +81,15 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="text-xs font-semibold uppercase tracking-widest text-[#C9A265]">Suporte</h4>
             <ul className="flex flex-col gap-3">
-              {["Central de Ajuda", "Fale Conosco", "Política de Privacidade", "Termos de Uso"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-sm text-[#6B7280] hover:text-[#0F1E3C] transition-colors duration-150">
-                    {item}
+              {[
+                { label: "Central de Ajuda", href: "#" },
+                { label: "Fale Conosco", href: "/fale-conosco" },
+                { label: "Política de Privacidade", href: "#" },
+                { label: "Termos de Uso", href: "#" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link href={item.href} className="text-sm text-[#6B7280] hover:text-[#0F1E3C] transition-colors duration-150">
+                    {item.label}
                   </Link>
                 </li>
               ))}

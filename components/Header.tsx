@@ -1,6 +1,5 @@
 import Image from "next/image";
-
-
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -9,28 +8,28 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Image
-              src="/logo-venancio.svg"
-              alt="Venancio Tools"
-              height={48}
-              width={200}
-              style={{ width: "auto", height: "48px" }}
-              priority
-            />
+            <Link href="/">
+              <Image
+                src="/logo-venancio.svg"
+                alt="Venancio Tools"
+                height={40}
+                width={180}
+                style={{ width: "auto", height: "40px" }}
+                priority
+              />
+            </Link>
           </div>
-
-          {/* Navigation — desktop */}
 
           {/* CTA + Hamburger */}
           <div className="flex items-center gap-4">
-            <a
-              href="#"
-              className="hidden sm:inline-flex items-center border border-[#0F1E3C] text-[#0F1E3C] px-4 py-1.5 rounded-full text-sm font-medium hover:bg-[#0F1E3C] hover:text-white transition-all duration-200"
+            <Link
+              href="/fale-conosco"
+              className="hidden sm:inline-flex items-center border border-[#0F1E3C] text-[#0F1E3C] px-5 py-2 rounded-full text-sm font-semibold tracking-wide hover:bg-[#0F1E3C] hover:text-white transition-all duration-200"
             >
-              Ajuda
-            </a>
+              Fale conosco
+            </Link>
 
-            {/* Hamburger — mobile only (visual) */}
+            {/* Hamburger — mobile only */}
             <button
               className="md:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8"
               aria-label="Menu"
